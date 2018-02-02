@@ -1,6 +1,8 @@
-<div *ngFor="let local of locais">
-  <div>
-    <p>{{local.name}}</p>
-    <img [src]="local.picture.data.url"/>
+<div class="row">
+  <div class="col-lg-3" *ngFor="let local of locais">
+    <div>
+      <p>{{local.name}}</p>
+      <img [src]="local.picture.data.url"/>
+    </div>
   </div>
 </div>

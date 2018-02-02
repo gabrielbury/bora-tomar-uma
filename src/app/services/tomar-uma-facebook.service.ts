@@ -7,7 +7,7 @@ export class TomarUmaFacebookService {
   constructor(private fb: FacebookService) { }
 
   buscar(latitude : string, longitude: string, token: string): Promise<any>{
-    return this.fb.api("/search", "get", {type: "place", q:"cerveja", center: latitude + "," + longitude, distance: 1000, fields: "name,checkins,picture", access_token: token})
+    return this.fb.api("/search", "get", {type: "place", q:"bar", center: latitude + "," + longitude, distance: 3000, fields: "name,checkins,picture", access_token: token})
       .then(response => {
         return Promise.resolve(response.data);
       })
