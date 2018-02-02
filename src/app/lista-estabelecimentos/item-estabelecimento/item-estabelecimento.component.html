@@ -4,6 +4,7 @@
     <img [src]="estabelecimento.capa" />
   </div>
 
+  <a class="btn-floating btn-action"><i class="fa fa-bullhorn"></i></a>
   <!--Avatar-->
   <div class="avatar"><img class="rounded-circle" [alt]="estabelecimento.nome" [src]="estabelecimento.imagem">
   </div>
@@ -11,8 +12,11 @@
   <div class="card-body">
       <!--Name-->
       <h4 class="card-title">{{estabelecimento.nome}}</h4>
+      <h6 class="checkins"><i class="fa fa-map-marker"></i> {{estabelecimento.checkins}}</h6>
       <hr>
       <!--Quotation-->
       <p><i class="fa fa-quote-left"></i> {{estabelecimento.descricao.substring(0, 150) + (estabelecimento.descricao.length > 150 ? '...' : '')}} <i class="fa fa-quote-right"></i></p>
+
+      
   </div>
 </div>
