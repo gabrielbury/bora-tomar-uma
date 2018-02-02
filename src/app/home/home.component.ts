@@ -11,41 +11,6 @@ import { LoginResponse } from 'ngx-facebook';
 })
 export class HomeComponent implements OnInit {
 
-  accessToken: string = "";
-
-  myCurrentPosition: any = {}
-
-  locais = [];
-
-  constructor(private authService: AuthService, private tomarUmaService: TomarUmaFacebookService) {
-
-    navigator.geolocation.getCurrentPosition(pos => {
-      this.setPosition(pos);
-      this.setUp();
-    });
-  }
-
-  setUp() {
-    this.authService.getToken()
-      .then(token => {
-        this.accessToken = token;
-        this.searchPlace();
-      })
-      .catch((error: any) => console.error(error));
-  }
-
-  searchPlace() {
-    this.tomarUmaService.buscar(this.myCurrentPosition.latitude, this.myCurrentPosition.longitude, this.accessToken)
-      .then(dados => {
-        this.locais = dados;
-      })
-  }
-
-  setPosition(position){
-    this.myCurrentPosition.latitude = position.coords.latitude;
-    this.myCurrentPosition.longitude = position.coords.longitude;
-  }
-
   ngOnInit() {
     
   }

@@ -34,4 +34,8 @@ export class AuthService {
       })
     }
   }
+
+  clearToken() {
+    localStorage.removeItem('token');
+  }
 }

@@ -1,0 +1,18 @@
+<div class="card testimonial-card" style="max-width: 22rem; min-height: 420px; margin-bottom: 35px;">
+  <!--Background color-->
+  <div class="card-up lighten-1">
+    <img [src]="estabelecimento.capa" />
+  </div>
+
+  <!--Avatar-->
+  <div class="avatar"><img class="rounded-circle" [alt]="estabelecimento.nome" [src]="estabelecimento.imagem">
+  </div>
+
+  <div class="card-body">
+      <!--Name-->
+      <h4 class="card-title">{{estabelecimento.nome}}</h4>
+      <hr>
+      <!--Quotation-->
+      <p><i class="fa fa-quote-left"></i> {{estabelecimento.descricao.substring(0, 150) + (estabelecimento.descricao.length > 150 ? '...' : '')}} <i class="fa fa-quote-right"></i></p>
+  </div>
+</div>

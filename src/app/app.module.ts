@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AuthService } from './auth.service';
 import { TomarUmaFacebookService } from './services/tomar-uma-facebook.service';
+import { ListaEstabelecimentosComponent } from './lista-estabelecimentos/lista-estabelecimentos.component';
+import { ItemEstabelecimentoComponent } from './lista-estabelecimentos/item-estabelecimento/item-estabelecimento.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ListaEstabelecimentosComponent,
+    ItemEstabelecimentoComponent
   ],
   imports: [
     BrowserModule,
