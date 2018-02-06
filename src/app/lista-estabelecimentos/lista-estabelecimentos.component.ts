@@ -13,6 +13,7 @@ export class ListaEstabelecimentosComponent implements OnInit {
   accessToken: string = "";
   myCurrentPosition: any = {}
   locais :Estabelecimento[] = [];
+  estabelecimentoSelecionado :Estabelecimento = new Estabelecimento();
 
   constructor(private authService: AuthService, private tomarUmaService: TomarUmaFacebookService) {
     
@@ -64,5 +65,8 @@ export class ListaEstabelecimentosComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
+  selecionarEstabelecimento(dados) {
+    console.log(dados);
+  }
 }

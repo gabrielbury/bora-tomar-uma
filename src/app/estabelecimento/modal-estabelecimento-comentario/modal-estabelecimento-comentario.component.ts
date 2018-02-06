@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Estabelecimento } from '../../shared/models/estabelecimento.model';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-modal-estabelecimento-comentario',
@@ -8,8 +9,9 @@ import { Estabelecimento } from '../../shared/models/estabelecimento.model';
 })
 export class ModalEstabelecimentoComentarioComponent implements OnInit {
 
-  @Input() estabelecimento: Estabelecimento;
-  constructor() { }
+  @Input() estabelecimentoSelecionado: Estabelecimento;
+  
+  constructor(public activeModal: NgbActiveModal) { }
 
   ngOnInit() {
   }

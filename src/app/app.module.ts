@@ -12,6 +12,7 @@ import { ItemEstabelecimentoComponent } from './lista-estabelecimentos/item-esta
 import { DetalheEstabelecimentoComponent } from './estabelecimento/detalhe-estabelecimento/detalhe-estabelecimento.component';
 import { ModalEstabelecimentoComentarioComponent } from './estabelecimento/modal-estabelecimento-comentario/modal-estabelecimento-comentario.component';
 
+import {NgbModule, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,16 @@ import { ModalEstabelecimentoComentarioComponent } from './estabelecimento/modal
     DetalheEstabelecimentoComponent,
     ModalEstabelecimentoComentarioComponent
   ],
+  entryComponents: [ModalEstabelecimentoComentarioComponent],
   imports: [
     BrowserModule,
-    FacebookModule.forRoot()
+    FacebookModule.forRoot(),
+    NgbModule.forRoot()
   ],
   providers: [
     AuthService,
-    TomarUmaFacebookService
+    TomarUmaFacebookService,
+    NgbActiveModal
   ],
   bootstrap: [AppComponent]
 })
