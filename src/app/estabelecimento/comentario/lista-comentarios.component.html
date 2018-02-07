@@ -1,0 +1,14 @@
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let comentario of listaComentarios">
+    <div class="row">
+      <div class="col-lg-2">
+          <span><img class="profile-pic" [src]="comentario.imagem" /></span>
+        </div>
+        
+        <div class="col-lg-10">
+          <small>{{comentario.nomeUsuario}}</small>
+          <p>{{comentario.comentario}}</p>
+        </div>
+    </div>
+  </li>
+</ul>

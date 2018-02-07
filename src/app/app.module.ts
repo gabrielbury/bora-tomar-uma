@@ -13,6 +13,9 @@ import { DetalheEstabelecimentoComponent } from './estabelecimento/detalhe-estab
 import { ModalEstabelecimentoComentarioComponent } from './estabelecimento/modal-estabelecimento-comentario/modal-estabelecimento-comentario.component';
 
 import {NgbModule, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
+import { ComentarioComponent } from './estabelecimento/comentario/comentario.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ListaComentariosComponent } from './estabelecimento/comentario/lista-comentarios.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +24,15 @@ import {NgbModule, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
     ListaEstabelecimentosComponent,
     ItemEstabelecimentoComponent,
     DetalheEstabelecimentoComponent,
-    ModalEstabelecimentoComentarioComponent
+    ModalEstabelecimentoComentarioComponent,
+    ComentarioComponent,
+    ListaComentariosComponent
   ],
   entryComponents: [ModalEstabelecimentoComentarioComponent],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     FacebookModule.forRoot(),
     NgbModule.forRoot()
   ],

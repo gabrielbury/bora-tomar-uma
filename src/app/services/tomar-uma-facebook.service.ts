@@ -15,4 +15,16 @@ export class TomarUmaFacebookService {
       })
   }
 
+  usuario(id: number, token: string): Promise<any>{
+    return this.fb.api("/"+id, 'get', {access_token: token})
+      .then((response) => {
+        return this.fb.api("/"+id+"/picture?type=square", "get", {})
+          .then(foto => {
+            console.log(foto);
+            response.profile_pic = foto.data.url;
+            return Promise.resolve(response);
+          })
+      })
+  }
+
 }

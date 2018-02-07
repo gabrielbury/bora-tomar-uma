@@ -1,0 +1,13 @@
+<form (ngSubmit)="salvar()">
+  <div class="form-group">
+    <label for="comentario">Comentário</label>
+    <textarea type="text" [formControl]="comentario" class="form-control" id="comentario" aria-describedby="comentarioHelp"></textarea>
+    <small id="comentarioHelp"  class="form-text text-muted">Insira seu comentário sobre {{estabelecimento.nome}}.</small>
+    <small *ngIf="!comentario.valid && comentario.touched" class="form-text text-danger">Você deve informar um comentário</small>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  </div>  
+</form>
